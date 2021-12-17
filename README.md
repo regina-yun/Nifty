@@ -2,7 +2,7 @@
 
 ## Beautifyer! App
 
-### Main features/functions
+### Main features and functions
 - Provides handy information about 'Period-After-Opening' and its logos
 - Allows the user to either:
   - Enter an expiry date or 
