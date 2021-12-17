@@ -1,7 +1,76 @@
+body {
+    background-color: pink;
+}
+
 .main-title {
     display: block;
     text-align: center;
+    text-shadow: 0 0 20px yellow;
     border: red solid;
     font-family: 'Pacifico', cursive;
     font-size: 250%;
+}
+
+.sub-title {
+    display: block;
+    text-align: center;
+    border: red solid;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 150%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 100px;
+   
+}
+
+#how-to-use {
+    display: block;
+    text-align: center;
+}
+
+#info {
+    display: block;
+    text-align: center;
+}
+
+#about {
+    display: block;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: red solid;
+}
+
+.input-func {
+    border: red solid;
+    text-align:center;
+}
+
+.list-date {
+    border: red solid;
+}
+
+.text, .input {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120%;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: yellowgreen;
+}
+
+.btn:hover {
+    background-color:aquamarine;
+    font-size: 90%;
 }
