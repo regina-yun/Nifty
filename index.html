@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <style></style>
-
-    <script></script>
 
     <title>Beautifyer! - Calculator and Reminder</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- stylesheet + js -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script defer src="index.js"></script>
+ 
 </head>
 
 <body>
@@ -18,14 +23,66 @@
         </div>
     </header>
 
+    <div class="nav-bar">
+        <nav>
+            <button class="btn" type="button">How to use</button>
+            <button class="btn" type="button">Information</button>
+            <button class="btn" type="button">About</button>
+        </nav>
 
+        <div id="how-to-use">
+            <p class="text">Please input How to use section here</p>
+        </div>
 
+        <div id="info">
+            <p class="text">Please input Info section here</p>
+        </div>
 
+        <div id="about">
+            <p class="text">Please input About section here</p>
+        </div>
+    </div>
 
+    <div class="main-content">
+        
+        <div class="input">
 
+            <div class="input">
+                <label for="pdt-name">Product Name</label>
+                <input id="pdt-name" type="text" placeholder="product name"/> 
+            </div>  
 
+            <br/>
 
+            <div class="input">
+            <label for="open-date">Date of Opening/Expiry Date</label>
+            <input id="open-date" type="date" name="calendar" value="2021-12-17"/>
+            </div>
 
+            <br/>
 
+            <div class="input">
+                <label for="pao">Period-After-Opening</label>
+                <select id="pao">
+                    <option value="3">3 Months</option>
+                    <option value="6">6 Months</option>
+                    <option value="9">9 Months</option>
+                    <option value="12">12 Months</option>
+                    <option value="18">18 Months</option>
+                    <option value="24">24 Months</option>
+                    <option value="36">36 Months</option>
+                </select>
+            </div>
 
+            <div>
+                <button type="submit">Add to list</button>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="list-date">Please input added list and date here</div>
+        </div>
+
+    </div>
 </body>
+</html>

@@ -1,0 +1,7 @@
+.main-title {
+    display: block;
+    text-align: center;
+    border: red solid;
+    font-family: 'Pacifico', cursive;
+    font-size: 250%;
+}
