@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Beautifyer! - Calculator and Reminder</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Meow+Script&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">   
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script defer src="index.js"></script>
@@ -21,22 +21,46 @@
 
     <div class="nav-bar">
         <nav>
-            <button class="btn" type="button">How to use</button>
-            <button class="btn" type="button">Information</button>
-            <button class="btn" type="button">About</button>
+            <div class="popup" id="btn1" onclick="popup1()">
+                <div class="popuptitle">How To Use</div>
+                <span class="popuptext" id="myPopup1">
+                    <p> <b>What kind of products can I add to this list?</b><br/>
+                    -	Major cosmetic products such as lipsticks, eyeliners, foundations, etc.<br/>
+                    -	Perfumes<br/>
+                    -	Shampoos, soaps, cleansers<br/>
+                    -	Sunscreens, lotions, toners, etc.<br/>
+                    <b>How to add item to tracker:</b><br/>
+                    Identify if your cosmetic product contains an actual expiry date.<br/>
+                    If yes, kindly enter the full expiry date in the following format: dd/mm/yyyy and leave the Period-After-Opening as NA.<br/>
+                    If no, kindly enter the date in which the product was opened in the following format: dd/mm/yyyy and select the appropriate POA value as per the item’s packaging label.<br/>
+                    Once complete, click on ‘Add to list’ and the products’ name and expiry date will be calculated and generated on a list.</p>
+                </span>
+            </div>
+
+            <div class="popup" id="btn2" onclick="popup2()">
+                <div class="popuptitle">Information</div>
+                <span class="popuptext" id="myPopup2">
+                    <p>1.	Expiration dates in cosmetics.<br/>
+                    Most cosmetics do not have an exact expiry date printed on the packaging label. The expiry date depends on when the product was first opened. How long the product can be used depends on the “Period-After-Opening” or “PAO” for short. The PAO is a symbol with a numerical value on it. The numerical value refers to the shelf life in months. 
+                    E.g., if the PAO states “12”, it will expire 12 months after opening.
+                    
+                    2.	What can cosmetics past its expiry date do to your skin?<br/>
+                    Firstly, the most immediate that comes to your attention is that the colour of the product probably does not look as vibrant anymore, or it would not be as fresh, or it may smell a little different from what you are used to.
+                    Secondly, the moment the product is opened, it gets exposed to bacteria. If you continue to use it past its expiration date, you may risk getting an infection due to the accumulation of bacteria. Infections such as inflamed skin, rashes, blisters and even swelling may occur.
+                    Finally, certain chemical and ingredients in cosmetics may have started to break down once it is past their expiry date. Individuals with sensitive skin are prone to getting rashes and allergies.</p>
+                    </span>
+            </div>
+
+            <div class="popup" id="btn3" onclick="popup3()">
+                <div class="popuptitle">About Us</div>
+                <span class="popuptext" id="myPopup3">
+                    <p>We have heard your cries regarding bad flare ups due to the usage of expired products.<br/>
+                    You need worry no more with Beautify!<br/>
+                    This handy expiration date calculator and tracker was created and designed by your average girl with not so average dreams to help save the skin of many others.<br/>
+                    We hope that this application can help spread awareness about the cons of using expired cosmetics.</p>
+                </span>
+            </div>
         </nav>
-
-        <div id="how-to-use">
-            <p class="text">Please input How to use section here</p>
-        </div>
-
-        <div id="info">
-            <p class="text">Please input Info section here</p>
-        </div>
-
-        <div id="about">
-            <p class="text">Please input About section here</p>
-        </div>
     </div>
 
     <div class="main-content">
@@ -50,28 +74,50 @@
 
             <br/>
 
-            <div class="input">
-            <label for="open-date">Date of Opening/Expiry Date</label>
-            <input id="open-date" type="date" name="calendar" value="2021-12-17"/>
+            <div class= "radioSelector">
+                <input id="hasExpDate" onclick="ExpDateRadioInput()" type="radio" name="hasExpDate" value="Has Expiry Date"/>
+                <label>Has Expiry Date</label>
+                <input id="noExpDate" onclick="NoExpDateRadioInput()" type="radio" name="noExpDate" value="No Expiry Date"/>
+                <label>No Expiry Date</label>
+            </div>
+            
+            <br/>
+
+             
+            <div class="input" id="expiry-block">
+                    <label for="exp-date">Expiry Date</label>
+                    <input id="exp-date" type="date" name="calendar" value="2021-12-17"/>
+            </div> 
+        
+            <br/>
+
+            <div id="date-pao-block">
+                <div class="input">
+                    <label for="open-date">Date of Opening</label>
+                    <input id="open-date" type="date" name="calendar" value="2021-12-17"/>
+                </div>
+
+                <br/>
+
+                <div class="input">
+                    <label for="pao">Period-After-Opening</label>
+                    <select id="pao">
+                        <option value="0">NA</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="9">9 Months</option>
+                        <option value="12">12 Months</option>
+                        <option value="18">18 Months</option>
+                        <option value="24">24 Months</option>
+                        <option value="36">36 Months</option>
+                    </select>
+                </div>
             </div>
 
             <br/>
 
-            <div class="input">
-                <label for="pao">Period-After-Opening</label>
-                <select id="pao">
-                    <option value="3">3 Months</option>
-                    <option value="6">6 Months</option>
-                    <option value="9">9 Months</option>
-                    <option value="12">12 Months</option>
-                    <option value="18">18 Months</option>
-                    <option value="24">24 Months</option>
-                    <option value="36">36 Months</option>
-                </select>
-            </div>
-
             <div>
-                <button class="btn" type="submit">Add to list</button>
+                <button onclick="submitInput()" class="btn" id="btn4" type="submit">Add to list</button>
             </div>
         </div>
 

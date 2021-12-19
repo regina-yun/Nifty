@@ -6,7 +6,6 @@ body {
     display: block;
     text-align: center;
     text-shadow: 0 0 20px yellow;
-    border: red solid;
     font-family: 'Pacifico', cursive;
     font-size: 250%;
 }
@@ -14,9 +13,8 @@ body {
 .sub-title {
     display: block;
     text-align: center;
-    border: red solid;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 150%;
+    font-family: 'Meow Script', cursive;
+    font-size: 200%;
 }
 
 nav {
@@ -46,16 +44,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: red solid;
+
+    padding: 100px 0;
 }
 
 .input-func {
-    border: red solid;
     text-align:center;
-}
-
-.list-date {
-    border: red solid;
 }
 
 .text, .input {
@@ -63,14 +57,55 @@ nav {
     font-size: 120%;
 }
 
-.btn {
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: yellowgreen;
+.popuptitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 150%;
 }
 
-.btn:hover {
-    background-color:aquamarine;
-    font-size: 90%;
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 630px;
+    height: 100px;
+    background-color: rgba(85, 85, 85, 50%);
+    color: #fff;
+    border-radius: 6px;
+    padding: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    left: -430px;
+    margin-left: -80px;
+}
+  
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+  
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+#expiry-block {
+    visibility: hidden;
+}
+
+#date-pao-block {
+    visibility: hidden;
 }
