@@ -1,17 +1,22 @@
 body {
     background-image: url('img.jpg');
     background-size: cover;
+}
+
+header {
     animation: slideInDown;
-    animation-duration: 4s; 
+    animation-duration: 5s;
+    animation-delay: -3s;
 }
 
 .main-title {
-    display: block;
+    display: inline;
     text-align: center;
-    text-shadow: 0 0 100px rgb(247, 104, 116);
+    text-shadow: 0 0 200px rgb(0, 0, 0);
     font-family: 'Pacifico', cursive;
-    font-size: 250%;
-    color: beige;
+    font-size: 300%;
+    color: black;
+    -webkit-text-stroke: 1px white;
 }
 
 h1 {
@@ -22,37 +27,31 @@ h1 {
     display: block;
     text-align: center;
     font-family: 'Meow Script', cursive;
-    font-size: 200%;
+    font-weight: bold;
+    font-size: 250%;
+    text-shadow: 3px 10px 0 rgb(0, 0, 0);
+    -webkit-text-stroke: 1px white;
+}
+
+h2 {
+    margin-top: 0;
 }
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    column-gap: 100px; 
-}
-
-#how-to-use {
-    display: block;
-    text-align: center;
-}
-
-#info {
-    display: block;
-    text-align: center;
-}
-
-#about {
-    display: block;
-    text-align: center;
+    column-gap: 100px;
 }
 
 .main-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 50px 300px;
-    
+    padding: 0 300px;
+    animation: slideInDown;
+    animation-duration: 5s;
+    animation-delay: -3s;
 }
 
 .input-func {
@@ -71,31 +70,40 @@ nav {
 
 .input-title {
     font-family: 'Damion', cursive;
-    font-size: 200%;
+    font-size: 35px;
     text-align: center;
     font-weight: bold;
     margin: auto 0;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .input {
     font-family: 'Damion', cursive;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .popuptitle {
     font-family: 'Permanent Marker', cursive;
     font-size: 150%;
+    animation: slideInDown;
+    animation-duration: 5s;
+    animation-delay: -2s;
+}
+
+.popuptitle:hover {
+    color: rgb(247, 104, 116);
+    text-decoration: underline;
 }
 
 #hasExpDateText {
     font-family: 'Damion', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #noExpDateText {
     font-family: 'Damion', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #expiry-block {
@@ -109,22 +117,24 @@ nav {
 }
 
 #product-name-title {
-    width: 150px;
+    width: 180px;
     text-align: center;
     font-family: 'Damion', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #expiry-date-title {
     width: 150px;
     text-align: center;
     font-family: 'Damion', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 td {
     text-align: center;
     font-family: 'Damion', cursive;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Popup container */
@@ -136,17 +146,18 @@ td {
 /* The actual popup (appears on top) */
 .popup .popuptext {
     visibility: hidden;
-    width: 630px;
-    height: 100px;
-    background-color: rgba(85, 85, 85, 50%);
+    display: block;
+    width: 700px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 100%);
     color: #fff;
     border-radius: 6px;
     padding: 50px;
     position: absolute;
     z-index: 1;
-    top: 200%;
-    left: -430px;
-    margin-left: -80px;
+    left: 350px;
+   
+
 }
   
 /* Toggle this class when clicking on the popup container (hide and show the popup) */

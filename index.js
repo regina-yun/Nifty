@@ -1,18 +1,17 @@
 
 function popup1() {
-    var popup = document.getElementById("myPopup1");
+    var popup = document.getElementById("popUp1");
     popup.classList.toggle("show");
 }
 
 
 function popup2() {
-    var popup = document.getElementById("myPopup2");
+    var popup = document.getElementById("popUp2");
     popup.classList.toggle("show");
 }
 
-
 function popup3() {
-    var popup = document.getElementById("myPopup3");
+    var popup = document.getElementById("popUp3");
     popup.classList.toggle("show");
 }
 
