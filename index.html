@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Beautifyer! - Calculator and Reminder</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Meow+Script&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">   
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Meow+Script&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="index.js"></script>
+
+    <title>Beautifyer! - Calculate & Track</title>
 </head>
 
 <body>
@@ -15,51 +19,18 @@
         </div>
 
         <div class="sub-title">
-            <h2>say bye to wastage and say hello to a better you</h2>
+            <h2>say bye to bad skin and say hello to a better you</h2>
         </div>
     </header>
 
     <div class="nav-bar">
         <nav>
-            <div class="popup" id="btn1" onclick="popup1()">
-                <div class="popuptitle">How To Use</div>
-                <span class="popuptext" id="myPopup1">
-                    <p> <b>What kind of products can I add to this list?</b><br/>
-                    -	Major cosmetic products such as lipsticks, eyeliners, foundations, etc.<br/>
-                    -	Perfumes<br/>
-                    -	Shampoos, soaps, cleansers<br/>
-                    -	Sunscreens, lotions, toners, etc.<br/>
-                    <b>How to add item to tracker:</b><br/>
-                    Identify if your cosmetic product contains an actual expiry date.<br/>
-                    If yes, kindly enter the full expiry date in the following format: dd/mm/yyyy and leave the Period-After-Opening as NA.<br/>
-                    If no, kindly enter the date in which the product was opened in the following format: dd/mm/yyyy and select the appropriate POA value as per the item’s packaging label.<br/>
-                    Once complete, click on ‘Add to list’ and the products’ name and expiry date will be calculated and generated on a list.</p>
-                </span>
-            </div>
+            <div class="popuptitle" id="popUp1" onclick="popup1()">How To Use</div>
+                
+            <div class="popuptitle" id="popUp2" onclick="popup2()">Information</div>
 
-            <div class="popup" id="btn2" onclick="popup2()">
-                <div class="popuptitle">Information</div>
-                <span class="popuptext" id="myPopup2">
-                    <p>1.	Expiration dates in cosmetics.<br/>
-                    Most cosmetics do not have an exact expiry date printed on the packaging label. The expiry date depends on when the product was first opened. How long the product can be used depends on the “Period-After-Opening” or “PAO” for short. The PAO is a symbol with a numerical value on it. The numerical value refers to the shelf life in months. 
-                    E.g., if the PAO states “12”, it will expire 12 months after opening.
-                    
-                    2.	What can cosmetics past its expiry date do to your skin?<br/>
-                    Firstly, the most immediate that comes to your attention is that the colour of the product probably does not look as vibrant anymore, or it would not be as fresh, or it may smell a little different from what you are used to.
-                    Secondly, the moment the product is opened, it gets exposed to bacteria. If you continue to use it past its expiration date, you may risk getting an infection due to the accumulation of bacteria. Infections such as inflamed skin, rashes, blisters and even swelling may occur.
-                    Finally, certain chemical and ingredients in cosmetics may have started to break down once it is past their expiry date. Individuals with sensitive skin are prone to getting rashes and allergies.</p>
-                    </span>
-            </div>
-
-            <div class="popup" id="btn3" onclick="popup3()">
-                <div class="popuptitle">About Us</div>
-                <span class="popuptext" id="myPopup3">
-                    <p>We have heard your cries regarding bad flare ups due to the usage of expired products.<br/>
-                    You need worry no more with Beautify!<br/>
-                    This handy expiration date calculator and tracker was created and designed by your average girl with not so average dreams to help save the skin of many others.<br/>
-                    We hope that this application can help spread awareness about the cons of using expired cosmetics.</p>
-                </span>
-            </div>
+            <div class="popuptitle" id="popUp3" onclick="popup3()">About Us</div>
+                
         </nav>
     </div>
 
@@ -67,42 +38,44 @@
         
         <div class="input-func">
 
+            <p class="input-title">Name & Date Inputs</p>
+
             <div class="input">
-                <label for="pdt-name">Product Name</label>
-                <input id="pdt-name" type="text" placeholder="product name"/> 
+                <label for="pdt-name">Product Name:</label><br>
+                <input id="pdt-name" type="text" placeholder="product name" autofocus/> 
             </div>  
 
             <br/>
 
             <div class= "radioSelector">
                 <input id="hasExpDate" onclick="ExpDateRadioInput()" type="radio" name="hasExpDate" value="Has Expiry Date"/>
-                <label>Has Expiry Date</label>
+                <label id="hasExpDateText">Has Expiry Date</label>
                 <input id="noExpDate" onclick="NoExpDateRadioInput()" type="radio" name="noExpDate" value="No Expiry Date"/>
-                <label>No Expiry Date</label>
+                <label id="noExpDateText">No Expiry Date</label>
             </div>
             
             <br/>
 
              
             <div class="input" id="expiry-block">
-                    <label for="exp-date">Expiry Date</label>
-                    <input id="exp-date" type="date" name="calendar" value="2021-12-17"/>
+                <label for="exp-date">Expiry Date:</label><br>
+                <input id="exp-date" type="date" name="calendar" value="2021-12-17"/>
             </div> 
         
             <br/>
 
             <div id="date-pao-block">
                 <div class="input">
-                    <label for="open-date">Date of Opening</label>
+                    <label for="open-date">Date of Opening:</label><br>
                     <input id="open-date" type="date" name="calendar" value="2021-12-17"/>
                 </div>
 
                 <br/>
 
                 <div class="input">
-                    <label for="pao">Period-After-Opening</label>
+                    <label for="pao">Period-After-Opening:</label><br>
                     <select id="pao">
-                        <option value="0">NA</option>
+                        <option value="0"> -- </option>
                         <option value="3">3 Months</option>
                         <option value="6">6 Months</option>
                         <option value="9">9 Months</option>
@@ -117,14 +90,23 @@
             <br/>
 
             <div>
-                <button onclick="submitInput()" class="btn" id="btn4" type="submit">Add to list</button>
+                <input onclick="submitInput()" class="btn" id="btn4" type="submit">
             </div>
         </div>
 
         <div class="list">
-            <div class="list-date">Please input added list and date here</div>
-        </div>
 
+            <p class="input-title">Input Listing</p>
+
+                <table id="table">
+                    <tr>
+                        <th id="product-name-title">- Product Name -</th>
+                        <th id="expiry-date-title">- Expiry Date -</th>
+                        <th id="blank"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 </html>
