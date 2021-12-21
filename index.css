@@ -32,14 +32,17 @@ body {
     }
   }
 
+header {
+    font-family: 'Bad Script', cursive;
+    text-shadow: 0 5px 0 rgb(255, 255, 255);
+    color: black;
+}
+
 .main-title {
     display: inline;
     text-align: center;
-    font-family: 'Pacifico', cursive;
     font-weight: bold;
-    font-size: 250%;
-    color: black;
-    text-shadow: 0 7px 0 rgb(255, 255, 255);
+    font-size: 200%;
 }
 
 h1 {
@@ -49,11 +52,7 @@ h1 {
 .sub-title {
     display: block;
     text-align: center;
-    font-family: 'Meow Script', cursive;
-    font-weight: bold;
-    font-size: 200%;
-    color: rgb(243, 88, 153);
-    text-shadow: 0 3px 0 rgb(0, 0, 0);
+    font-size: 150%;
 }
 
 h2 {
@@ -69,6 +68,28 @@ nav {
     padding-bottom: 20px;
 }
 
+.modaltitle {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    font-size: 150%;
+    text-shadow: 0 0 20px black;
+}
+
+.modaltitle:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.text {
+    font-family: 'Dosis', cursive;
+    font-size: 18px;
+}
+
+.text-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px
+}
+
 .main-content {
     display: flex;
     flex-direction: row;
@@ -82,7 +103,7 @@ nav {
     padding: 20px 50px;
     background-color: rgba(85, 85, 85, 80%);
     border-radius: 20px;
-    
+    text-shadow: 0 0 10px white;
 }
 
 .list {
@@ -98,27 +119,18 @@ nav {
     font-size: 25px;
 }
 
-.modaltitle {
-    font-family: 'Permanent Marker', cursive;
-    font-weight: bold;
-    font-size: 150%;
-}
-
-.popuptitle:hover {
-    color: white;
-    text-decoration: underline;
-}
-
 #hasExpDateText {
     font-family: 'Patrick Hand SC', cursive;
     font-weight: bold;
     font-size: 25px;
+    text-shadow: 0 0 10px white;
 }
 
 #noExpDateText {
     font-family: 'Patrick Hand SC', cursive;
     font-weight: bold;
     font-size: 25px;
+    text-shadow: 0 0 10px white;
 }
 
 #expiry-block {
@@ -139,6 +151,11 @@ nav {
 .btn:hover{
     color: white;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+#table {
+    overflow: scroll;
 }
 
 #product-name-title {
@@ -146,6 +163,7 @@ nav {
     text-align: center;
     font-family: 'Patrick Hand SC', cursive;
     font-size: 25px;
+    text-shadow: 0 0 10px white;
 }
 
 #expiry-date-title {
@@ -153,6 +171,7 @@ nav {
     text-align: center;
     font-family: 'Patrick Hand SC', cursive;
     font-size: 25px;
+    text-shadow: 0 0 10px white;
 }
 
 #blank {
@@ -161,18 +180,8 @@ nav {
 
 td {
     text-align: center;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Dosis', cursive;
     font-size: 20px;
-}
-
-.text {
-    font-family: 'Kalam', cursive;
-    font-size: 20px;
-}
-
-.text-title {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px
 }
 
 /* The Modal (background) */
@@ -180,7 +189,6 @@ td {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    border-radius: 10px;
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -188,16 +196,16 @@ td {
     margin: 0 auto;
 }
   
-  /* Modal Content/Box */
+/* Modal Content/Box */
 #modal-content1 {
     background-color: #000000;
     color: white;
     top: 0;
     left: 0;
-    margin: 5% auto;
+    margin: 7.5% auto;
     border-radius: 30px;
     padding: 20px;
-    width: 70%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
 }
 
 #modal-content2 {
@@ -205,10 +213,10 @@ td {
     color: white;
     top: 0;
     left: 0;
-    margin: 5% auto;
+    margin: 14% auto;
     border-radius: 30px;
     padding: 20px;
-    width: 70%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
 }
 
 #modal-content3 {
@@ -216,13 +224,13 @@ td {
     color: white;
     top: 0;
     left: 0;
-    margin: 5% auto;
+    margin: 13% auto;
     border-radius: 30px;
     padding: 20px;
-    width: 70%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
 }
   
-  /* The Close Button */
+/* The Close Button */
 .close {
     color: #aaa;
     float: right;
@@ -233,6 +241,7 @@ td {
 .close:hover,
 .close:focus {
     color: pink;
+    font-size: 40px;
     text-decoration: none;
     cursor: pointer;
 }
