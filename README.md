@@ -1,9 +1,9 @@
 # Project Week 1
 
-## Beautifyer! App
+## Calcumate App
 
 ### Main features and functions
-- Provides handy information about 'Period-After-Opening' and its logos
+- Provides handy information about using expired cosmetics and 'Period-After-Opening'
 - Allows the user to either:
   - Enter an expiry date or 
   - Calculate the expiry date of the cosmetic product
@@ -13,5 +13,5 @@
 
 ### Supported Devices
 - Mobile devices
-- Computers
+- Desktops/Laptops
 

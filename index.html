@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Meow+Script&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Kalam&family=Meow+Script&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,53 +25,89 @@
 
     <div class="nav-bar">
         <nav>
-            <div class="popuptitle" onclick="popup1()">How To Use</div>
+            <div class="modaltitle" id="btn1">How To Use</div>
                 
-            <div class="popuptitle" onclick="popup2()">Information</div>
+            <div class="modaltitle" id="btn2">Information</div>
 
-            <div class="popuptitle" onclick="popup3()">About Us</div>
+            <div class="modaltitle" id="btn3">About Us</div>
         </nav>
 
-            <div class="popup">
-                <span class="popuptext" id="popUp1">
-                    <p> <b>What kind of products can I add to this list?</b><br/>
-                    -	Major cosmetic products such as lipsticks, eyeliners, foundations, etc.<br/>
-                    -	Perfumes<br/>
-                    -	Shampoos, soaps, cleansers<br/>
-                    -	Sunscreens, lotions, toners, etc.<br/>
-                    <b>How to add item to tracker:</b><br/>
-                    Identify if your cosmetic product contains an actual expiry date.<br/>
-                    If yes, kindly enter the full expiry date in the following format: dd/mm/yyyy and leave the Period-After-Opening as NA.<br/>
-                    If no, kindly enter the date in which the product was opened in the following format: dd/mm/yyyy and select the appropriate POA value as per the item’s packaging label.<br/>
-                    Once complete, click on ‘Add to list’ and the products’ name and expiry date will be calculated and generated on a list.</p>
-                </span>
+        <div class="modal" id="myModal1">
+            <div id="modal-content1">
+                <span class="close" id="close1">&times;</span>
+                    <p class="text">
+                        <span class="text-title"><b>What kind of products can I add to this list?</b></span>
+                        <br/>
+                        <br/>
+                            Major cosmetic products, perfumes, shampoos, body washes, lotions, etc.
+                        <br/>
+                        <br/>
+                        <span class="text-title"><b>How to add and delete items?</span></b>
+                        <br/>
+                        <br/>
+                            Identify if your cosmetic product contains an actual expiry date.
+                        <br/>
+                        <br/>
+                            If yes, kindly enter the full expiry date and leave 'Period-After-Opening'(PAO) entry as '--'.
+                        <br/>
+                        <br/>
+                            If no, kindly enter the date in which the product was opened and select the PAO value as per the label.
+                        <br/>
+                        <br/>
+                            Click on ‘Click here to submit’ and the name and expiry date will be calculated and printed appropriately.
+                        <br/>
+                        <br/>
+                            You can click on <i class="fa fa-trash"></i> to remove the entry from the list.
+                        </p>
+            </div>
+        </div>
+        
+        <div class="modal" id="myModal2">
+            <div id="modal-content2">
+                <span class="close" id="close2">&times;</span>
+                    <p class="text">
+                        <span class="text-title">1.	Expiration dates in cosmetics. </span>
+                        <br/>
+                        <br/>
+                        Most cosmetics' expiry date is based on when it was first opened. How long the product can be used depends on the 'Period-After-Opening' (PAO). It is a symbol with a numerical value on it. The numerical value refers to the shelf life in months. 
+                        E.g., if the PAO states “12”, it will expire 12 months after opening.
+                        <br/>
+                        <br/>  
+                        <span class="text-title">2.	What can cosmetics past its expiry date do to your skin?</span>
+                        <br/>
+                        <br/>
+                        1. The colour of the product probably does not look as vibrant anymore, or it may smell/feels a little different from what you are used to.
+                        <br/>
+                        <br/>
+                        2. You may risk getting an infection due to the accumulation of bacteria. Infections such as inflamed skin, rashes, blisters and even swelling may occur.
+                        <br/>
+                        <br/>
+                        3. Certain ingredients in cosmetics may have started to break down. Individuals with sensitive skin may get rashes and allergies.
+                    </p>
+            </div>
+        </div>
 
-                <span class="popuptext" id="popUp2">
-                    <p>1.	Expiration dates in cosmetics.<br/>
-                    Most cosmetics do not have an exact expiry date printed on the packaging label. The expiry date depends on when the product was first opened. How long the product can be used depends on the “Period-After-Opening” or “PAO” for short. The PAO is a symbol with a numerical value on it. The numerical value refers to the shelf life in months. 
-                    E.g., if the PAO states “12”, it will expire 12 months after opening.<br/>
-                    
-                    2.	What can cosmetics past its expiry date do to your skin?<br/>
-                    Firstly, the most immediate that comes to your attention is that the colour of the product probably does not look as vibrant anymore, or it would not be as fresh, or it may smell a little different from what you are used to.
-                    Secondly, the moment the product is opened, it gets exposed to bacteria. If you continue to use it past its expiration date, you may risk getting an infection due to the accumulation of bacteria. Infections such as inflamed skin, rashes, blisters and even swelling may occur.
-                    Finally, certain chemical and ingredients in cosmetics may have started to break down once it is past their expiry date. Individuals with sensitive skin are prone to getting rashes and allergies.</p>
-                </span>
-
-                <span class="popuptext" id="popUp3">
-                    <p>We have heard your cries regarding bad flare ups due to the usage of expired products.<br/>
-                    You need worry no more with Beautify!<br/>
-                    This handy expiration date calculator and tracker was created and designed by your average girl with not so average dreams to help save the skin of many others.<br/>
-                    We hope that this application can help spread awareness about the cons of using expired cosmetics.</p>
-                </span>
-            </div>      
+        <div class="modal" id="myModal3">
+            <div id="modal-content3">
+                <span class="close" id="close3">&times;</span>
+                    <p class="text">
+                        We have heard your cries on how to calculate expiry dates, and to also keep track of them.
+                        <br/>
+                        <br/>
+                        You need worry no more with <b>Calcumate!</b>
+                        <br/>
+                        <br/>
+                        This handy expiration date calculator and tracker was created and designed by your average girl with not so average dreams to help save the skin of many others.
+                        <br/>
+                        <br/>
+                        We hope that this application can help you manage your cosmetics.
+                    </p>
+            </div>
+        </div>      
     </div>
 
-    <div class="main-content">
-        
+    <div class="main-content"> 
         <div class="input-func">
-
-            <p class="input-title">Name & Date Inputs</p>
-
             <div class="input">
                 <label for="pdt-name">Product Name:</label><br>
                 <input id="pdt-name" type="text" placeholder="product name" autofocus/> 
@@ -122,18 +158,15 @@
             <br/>
 
             <div>
-                <input onclick="submitInput()" class="btn" id="btn4" type="submit">
+                <div class="btn" onclick="submitInput()">Click here to submit!</div>
             </div>
         </div>
 
         <div class="list">
-
-            <p class="input-title">Input Listing</p>
-
                 <table id="table">
                     <tr>
-                        <th id="product-name-title">Product Name<th>
-                        <th id="expiry-date-title">Expiry Date</th>
+                        <th id="product-name-title"><u>Product Name</u></th>
+                        <th id="expiry-date-title"><u>Expiry Date</u></th>
                         <th id="blank"></th>
                     </tr>
                 </table>
