@@ -3,7 +3,7 @@
 ## Calcumate App
 
 ### Main features and functions
-- Provides handy information about using expired cosmetics and 'Period-After-Opening'
+- Provides handy information about 'Period-After-Opening'
 - Allows the user to either:
   - Enter an expiry date or 
   - Calculate the expiry date of the cosmetic product
