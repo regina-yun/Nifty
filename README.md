@@ -2,6 +2,8 @@
 
 ## Nifty Tracker
 
+![image](images\tracker-img.png)
+
 ### Main features and functions
 - Provides handy information about cosmetic expiry dates
 - Allows the user to either:
