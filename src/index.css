@@ -1,5 +1,5 @@
 body {
-    background-image: url('img.jpg');
+    background-image: url('/images/img.jpg');
     background-size: cover;
     margin: auto 0;
     -webkit-animation: slide-bottom 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
