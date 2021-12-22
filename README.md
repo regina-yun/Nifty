@@ -1,17 +1,17 @@
 # Project Week 1
 
-## Calcumate App
+## Nifty Tracker
 
 ### Main features and functions
-- Provides handy information about using expired cosmetics and 'Period-After-Opening'
+- Provides handy information about cosmetic expiry dates
 - Allows the user to either:
   - Enter an expiry date or 
-  - Calculate the expiry date of the cosmetic product
-- Adds item to a list, including their expiration dates based on their input for tracking purposes
-- Set reminders to remind user on upcoming expirations
+  - Enter the date of opening and the period-after-opening
+- Allows tracking of dates by saving it on the browser's cache
 - Allows physical removal of item once it has been used up/expired
 
 ### Supported Devices
 - Mobile devices
+- Tablets/Phablets
 - Desktops/Laptops
 

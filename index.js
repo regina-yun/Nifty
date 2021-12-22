@@ -1,3 +1,14 @@
+let text = localStorage.getItem("tracking-list");
+let productList = JSON.parse(text);
+
+if (productList == null || productList == "") {
+    productList = [];
+}
+
+for (let i = 0; i < productList.length; i++) {
+    addRow(productList[i]);
+}
+
 // Get the modal
 var modal1 = document.getElementById("myModal1");
 var modal2 = document.getElementById("myModal2");
@@ -75,8 +86,6 @@ function NoExpDateRadioInput() {
 
 }
 
-const productList = [];
-
 class Product {
     constructor(productName, expiryDate) {
         this.productName = productName;
@@ -120,6 +129,12 @@ function submitInput() {
         expiryDate = d.toDateString();
     }
 
+    else if (hasExpDate.checked === false && noExpDate.checked === false) {
+
+        alert("Invalid Selection. Options have not been checked.");
+        return;
+    }
+
     if (expiryDate !== "") {
         let newProduct = new Product(productName.value, expiryDate);
         productList.push(newProduct);
@@ -127,6 +142,9 @@ function submitInput() {
         addRow(newProduct);
 
         resetInput();
+
+        let myJSON = JSON.stringify(productList);
+        localStorage.setItem("tracking-list", myJSON);
     }
 }
 
@@ -156,9 +174,9 @@ function resetInput() {
 }
 
 function addRow(newProduct) {
-
-    let table = document.getElementById("table");
-    let row = table.insertRow(-1);
+    let tableBody = document.getElementById("table-body");
+    let row = tableBody.insertRow(-1);
+    row.className = "divider";
    
     let cellProductName = row.insertCell(0);
     let cellExpiryDate = row.insertCell(1);
