@@ -10,19 +10,19 @@ for (let i = 0; i < productList.length; i++) {
 }
 
 // Get the modal
-var modal1 = document.getElementById("myModal1");
-var modal2 = document.getElementById("myModal2");
-var modal3 = document.getElementById("myModal3");
+let modal1 = document.getElementById("myModal1");
+let modal2 = document.getElementById("myModal2");
+let modal3 = document.getElementById("myModal3");
 
 // Get the button that opens the modal
-var btn1 = document.getElementById("btn1");
-var btn2 = document.getElementById("btn2");
-var btn3 = document.getElementById("btn3");
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
 
 // Get the <span> element that closes the modal
-var span1 = document.getElementById("close1");
-var span2 = document.getElementById("close2");
-var span3 = document.getElementById("close3");
+let span1 = document.getElementById("close1");
+let span2 = document.getElementById("close2");
+let span3 = document.getElementById("close3");
 
 // When the user clicks on the button, open the modal
 btn1.onclick = function() {
